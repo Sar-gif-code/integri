@@ -7,21 +7,21 @@
   <meta name="description" content="Персональные фильмы, мультфильмы, сказки и видео-поздравления, созданные с помощью ИИ.">
   <meta name="theme-color" content="#1E1410">
   <meta property="og:title" content="INTEGRI FILMS — Ваша история на большом экране">
-  <meta property="og:image" content="media/showreel-poster.jpg">
+  <meta property="og:image" content="showreel-poster.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-  <link rel="preload" as="image" href="media/curtain.jpg">
+  <link rel="preload" as="image" href="curtain.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Заставка: занавес → видео со звуком (media/intro.mp4) -->
+  <!-- Заставка: занавес → видео со звуком (intro.mp4) -->
   <div class="curtain">
-    <video class="intro-video" playsinline preload="auto" poster="media/intro-poster.jpg">
-      <source src="media/intro.mp4" type="video/mp4">
+    <video class="intro-video" playsinline preload="auto" poster="intro-poster.jpg">
+      <source src="intro.mp4" type="video/mp4">
     </video>
-    <!-- Шторы: фото настоящей ткани (media/curtain.jpg); правое полотно — зеркальное -->
+    <!-- Шторы: фото настоящей ткани (curtain.jpg); правое полотно — зеркальное -->
     <div class="curtain-panel left"><div class="cloth"></div></div>
     <div class="curtain-panel right"><div class="cloth"></div></div>
     <div class="curtain-logo">INTEGRI <span>FILMS</span></div>
@@ -50,8 +50,8 @@
     <!-- 1. Первый экран -->
     <section class="hero">
       <div class="hero-media" data-parallax="0.35">
-        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/showreel-poster.jpg">
-          <source src="media/showreel.mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="showreel-poster.jpg">
+          <source src="showreel.mp4" type="video/mp4">
         </video>
       </div>
       <div class="hero-shade"></div>
