@@ -32,7 +32,7 @@
   // ---------- Списки ----------
   const WHAT_MEDIA = [
     '<img src="showreel-poster.jpg" alt="" loading="lazy">',
-    '<div class="art art-cartoon"><i></i><i></i><i></i></div>',
+    '<img src="cartoon.jpg" alt="" loading="lazy">',
     '<div class="art art-tale"><b></b><i></i><i></i><i></i><i></i><i></i></div>',
     '<img src="arrival-window.jpg" alt="" loading="lazy">',
   ];
