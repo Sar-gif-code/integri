@@ -12,8 +12,8 @@ window.SITE = {
   prices: { greeting: null, tale: null, film: null },
 
   // Фоновая музыка. Пусто = тихое фортепиано, которое сайт играет сам.
-  // Свой трек: положите файл в media и впишите путь, например 'media/music.mp3'.
-  music: 'media/music.m4a', // мелодия из видео с письмом
+  // Свой трек: положите файл рядом с index.html и впишите его имя, например 'music.mp3'.
+  music: 'music.m4a', // мелодия из видео с письмом
 
   // Фото основательницы. Пусто = элегантная заглушка с монограммой.
   founderPhoto: '',
@@ -21,8 +21,8 @@ window.SITE = {
   // Портфолио: добавьте строку — карточка появится автоматически.
   // title — ключ из texts (portfolio.works) или просто строка.
   works: [
-    { video: 'media/showreel.mp4', poster: 'media/showreel-poster.jpg', title: 'home', type: 'film', wide: true },
-    { video: 'media/arrival.mp4', poster: 'media/arrival-city.jpg', title: 'arrival', type: 'film' },
+    { video: 'showreel.mp4', poster: 'showreel-poster.jpg', title: 'home', type: 'film', wide: true },
+    { video: 'arrival.mp4', poster: 'arrival-city.jpg', title: 'arrival', type: 'film' },
   ],
 
   // Отзывы: { name, city, text, photo }. Пока пусто — показываем тёплую заглушку.
