@@ -149,7 +149,7 @@ p { margin: 0; }
 .cloth {
   position: absolute;
   inset: -2% 0;
-  background: url('media/curtain.jpg') center / cover no-repeat;
+  background: url('curtain.jpg') center / cover no-repeat;
   filter: contrast(1.06) saturate(1.08);
 }
 /* Правое полотно — зеркальное, чтобы шторы сходились симметрично, как настоящая пара */
