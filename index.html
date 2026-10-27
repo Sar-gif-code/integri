@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>INTEGRI FILMS — Ваша история на большом экране</title>
+  <meta name="description" content="Персональные фильмы, мультфильмы, сказки и видео-поздравления, созданные с помощью ИИ.">
+  <meta name="theme-color" content="#1E1410">
+  <meta property="og:title" content="INTEGRI FILMS — Ваша история на большом экране">
+  <meta property="og:image" content="media/showreel-poster.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link rel="preload" as="image" href="media/curtain.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Заставка: занавес → видео со звуком (media/intro.mp4) -->
+  <div class="curtain">
+    <video class="intro-video" playsinline preload="auto" poster="media/intro-poster.jpg">
+      <source src="media/intro.mp4" type="video/mp4">
+    </video>
+    <!-- Шторы: фото настоящей ткани (media/curtain.jpg); правое полотно — зеркальное -->
+    <div class="curtain-panel left"><div class="cloth"></div></div>
+    <div class="curtain-panel right"><div class="cloth"></div></div>
+    <div class="curtain-logo">INTEGRI <span>FILMS</span></div>
+    <button class="intro-tap" type="button"><i></i><span data-t="intro.tap"></span></button>
+    <button class="intro-skip" type="button" data-t="intro.skip"></button>
+  </div>
+
+  <header class="header" id="top">
+    <a class="logo" href="#top" aria-label="INTEGRI FILMS">INTEGRI <span>FILMS</span></a>
+    <nav class="nav" id="nav">
+      <a href="#what" data-t="nav.what"></a>
+      <a href="#how" data-t="nav.how"></a>
+      <a href="#portfolio" data-t="nav.portfolio"></a>
+      <a href="#prices" data-t="nav.prices"></a>
+      <a href="#faq" data-t="nav.faq"></a>
+      <div class="lang lang-mobile" data-lang-switch></div>
+    </nav>
+    <div class="header-right">
+      <div class="lang" data-lang-switch></div>
+      <a class="btn btn-small" href="#order" data-t="nav.order"></a>
+      <button class="burger" type="button" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Первый экран -->
+    <section class="hero">
+      <div class="hero-media" data-parallax="0.35">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="media/showreel-poster.jpg">
+          <source src="media/showreel.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="kicker hero-in" style="--d:0" data-t="hero.kicker"></p>
+        <h1 class="hero-title hero-in" style="--d:1" data-t-html="hero.title"></h1>
+        <p class="hero-sub hero-in" style="--d:2" data-t="hero.sub"></p>
+        <div class="hero-btns hero-in" style="--d:3">
+          <a class="btn" href="#order" data-type="greeting" data-t="hero.btnGreeting"></a>
+          <a class="btn btn-ghost" href="#order" data-type="film" data-t="hero.btnFilm"></a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#what"><span data-t="hero.scroll"></span><i></i></a>
+    </section>
+
+    <!-- 2. Что мы создаём -->
+    <section class="sec" id="what">
+      <div class="wrap">
+        <p class="kicker" data-reveal data-t="what.kicker"></p>
+        <h2 class="h2" data-reveal data-t="what.title"></h2>
+        <div class="what-grid" data-list="what"></div>
+      </div>
+    </section>
+
+    <!-- 3. Как это работает -->
+    <section class="sec sec-alt" id="how">
+      <div class="wrap">
+        <p class="kicker" data-reveal data-t="how.kicker"></p>
+        <h2 class="h2" data-reveal data-t="how.title"></h2>
+        <ol class="steps" data-list="how"></ol>
+      </div>
+    </section>
+
+    <!-- 4. Портфолио -->
+    <section class="sec" id="portfolio">
+      <div class="wrap">
+        <p class="kicker" data-reveal data-t="portfolio.kicker"></p>
+        <h2 class="h2" data-reveal data-t="portfolio.title"></h2>
+        <div class="works" data-list="works"></div>
+      </div>
+    </section>
+
+    <!-- 5. Цены -->
+    <section class="sec sec-alt" id="prices">
+      <div class="wrap">
+        <p class="kicker" data-reveal data-t="prices.kicker"></p>
+        <h2 class="h2" data-reveal data-t="prices.title"></h2>
+        <p class="pilot" data-reveal><span class="pilot-dot"></span><span data-t="prices.pilot"></span></p>
+        <div class="plans" data-list="plans"></div>
+      </div>
+    </section>
+
+    <!-- 6. Отзывы -->
+    <section class="sec" id="reviews">
+      <div class="wrap">
+        <p class="kicker" data-reveal data-t="reviews.kicker"></p>
+        <h2 class="h2" data-reveal data-t="reviews.title"></h2>
+        <div class="reviews" data-list="reviews"></div>
+      </div>
+    </section>
+
+    <!-- 7. Об основателе -->
+    <section class="sec sec-alt founder" id="founder">
+      <div class="wrap founder-grid">
+        <div class="founder-photo" data-reveal data-parallax="-0.06" data-founder-photo>
+          <span class="monogram">S</span>
+        </div>
+        <div class="founder-copy">
+          <p class="kicker" data-reveal data-t="founder.kicker"></p>
+          <h2 class="h2" data-reveal data-t="founder.title"></h2>
+          <div data-list="founder"></div>
+          <p class="sign" data-reveal data-t="founder.sign"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Частые вопросы -->
+    <section class="sec" id="faq">
+      <div class="wrap wrap-narrow">
+        <p class="kicker" data-reveal data-t="faq.kicker"></p>
+        <h2 class="h2" data-reveal data-t="faq.title"></h2>
+        <div class="faq" data-list="faq"></div>
+      </div>
+    </section>
+
+    <!-- 9. Форма заказа -->
+    <section class="sec sec-alt order" id="order">
+      <div class="wrap wrap-narrow">
+        <p class="kicker" data-reveal data-t="form.kicker"></p>
+        <h2 class="h2" data-reveal data-t="form.title"></h2>
+        <p class="lead" data-reveal data-t="form.sub"></p>
+        <form class="form" id="form" novalidate data-reveal>
+          <div class="row2">
+            <label class="field">
+              <span data-t="form.name"></span>
+              <input name="name" type="text" autocomplete="name" required>
+              <small class="err" data-t="form.errName"></small>
+            </label>
+            <label class="field">
+              <span data-t="form.phone"></span>
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7" required>
+              <small class="err" data-t="form.errPhone"></small>
+            </label>
+          </div>
+          <div class="row2">
+            <label class="field">
+              <span data-t="form.type"></span>
+              <select name="type" data-list="types"></select>
+            </label>
+            <label class="field">
+              <span data-t="form.occasion"></span>
+              <input name="occasion" type="text" data-ph="form.occasionPh">
+            </label>
+          </div>
+          <label class="field">
+            <span data-t="form.date"></span>
+            <input name="date" type="date">
+          </label>
+          <label class="field">
+            <span data-t="form.idea"></span>
+            <textarea name="idea" rows="4" data-ph="form.ideaPh"></textarea>
+          </label>
+          <div class="field">
+            <span data-t="form.photos"></span>
+            <label class="upload">
+              <input name="photos" type="file" accept="image/*" multiple>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-t="form.photosBtn" data-photos-label></span>
+            </label>
+            <div class="thumbs" data-thumbs></div>
+            <small class="hint" data-t="form.photosHint"></small>
+          </div>
+          <button class="btn btn-wide" type="submit" data-t="form.submit"></button>
+          <p class="success" data-success data-t="form.success" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. Подвал -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo logo-big" href="#top">INTEGRI <span>FILMS</span></a>
+        <p class="footer-tag" data-t="footer.tagline"></p>
+      </div>
+      <div>
+        <p class="kicker" data-t="footer.contacts"></p>
+        <div class="socials" data-socials></div>
+      </div>
+      <div class="lang lang-footer" data-lang-switch></div>
+    </div>
+    <p class="rights" data-rights></p>
+  </footer>
+
+  <!-- Плавающая кнопка WhatsApp -->
+  <a class="fab" data-wa="default" target="_blank" rel="noopener" data-t-aria="fab">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Кнопка музыки -->
+  <button class="music" type="button" aria-pressed="false" hidden>
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- Видео во всплывающем окне -->
+  <div class="modal" id="modal" hidden>
+    <button class="modal-close" type="button" data-t-aria="nav.close">&times;</button>
+    <video class="modal-video" controls playsinline></video>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.22-.08-.39-.12-.55.13-.17.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.55-1.34-.76-1.83-.2-.48-.4-.42-.55-.42h-.47c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28Z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.94 4.6 18.9 19.04c-.23 1.02-.83 1.27-1.69.79l-4.66-3.43-2.25 2.16c-.25.25-.46.46-.94.46l.33-4.75 8.66-7.82c.38-.33-.08-.52-.58-.19L7.06 13 2.45 11.56c-1-.31-1.02-1 .21-1.48L20.66 3.1c.84-.31 1.57.19 1.28 1.5Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a.8.8 0 0 0 1.2.7l10.4-6.5a.8.8 0 0 0 0-1.4L9.2 4.8A.8.8 0 0 0 8 5.5Z"/></symbol>
+  </svg>
+
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="music.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
