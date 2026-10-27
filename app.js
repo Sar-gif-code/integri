@@ -31,10 +31,10 @@
 
   // ---------- Списки ----------
   const WHAT_MEDIA = [
-    '<img src="media/showreel-poster.jpg" alt="" loading="lazy">',
+    '<img src="showreel-poster.jpg" alt="" loading="lazy">',
     '<div class="art art-cartoon"><i></i><i></i><i></i></div>',
     '<div class="art art-tale"><b></b><i></i><i></i><i></i><i></i><i></i></div>',
-    '<img src="media/arrival-window.jpg" alt="" loading="lazy">',
+    '<img src="arrival-window.jpg" alt="" loading="lazy">',
   ];
   const PLAN_TYPES = ['greeting', 'tale', 'film'];
 
@@ -508,7 +508,11 @@
     };
 
     video.addEventListener('ended', finish);
+    // Если ролик не загрузился (ошибка у <source>) или завис — всё равно открываем сайт
     video.addEventListener('error', finish);
+    $$('source', video).forEach((s) => s.addEventListener('error', () => started && finish()));
+    curtain.addEventListener('click', () => setTimeout(() => (video.paused || video.readyState < 2) && finish(), 3500), { once: true });
+    curtain.addEventListener('click', () => setTimeout(finish, 15000), { once: true });
     $('.intro-skip', curtain).addEventListener('click', (e) => {
       e.stopPropagation();
       finish();
